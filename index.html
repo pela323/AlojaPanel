@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alojamiento</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Alojamiento</h1>
+  </header>
+
+  <section class="precios">
+    <h2>Precios por tipo de habitación</h2>
+    <div id="lista-precios" class="grid-precios"></div>
+  </section>
+
+  <script>
+    // Cargar los precios desde precios.json
+    fetch("precios.json")
+      .then(r => r.json())
+      .then(data => {
+        const contenedor = document.getElementById("lista-precios");
+        contenedor.innerHTML = `
+          <div class="card"><h3>Habitación 2 personas</h3><p>$${data.habitacion_2}</p></div>
+          <div class="card"><h3>Habitación 3 personas</h3><p>$${data.habitacion_3}</p></div>
+          <div class="card"><h3>Habitación 4 personas</h3><p>$${data.habitacion_4}</p></div>
+          <div class="card"><h3>Habitación 5 personas</h3><p>$${data.habitacion_5}</p></div>
+          <div class="card"><h3>Cochera</h3><p>$${data.cochera}</p></div>
+          <div class="card"><h3>Mascotas</h3><p>$${data.mascotas}</p></div>
+        `;
+      });
+  </script>
+</body>
+</html>

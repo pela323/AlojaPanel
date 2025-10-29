@@ -1,0 +1,59 @@
+<!-- ← Panel de administración -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Panel de Administración</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/admin.js"></script>
+</head>
+<body class="admin">
+
+  <!-- ENCABEZADO -->
+  <header class="header-admin">
+    <img src="img/logo.png" alt="Logo" class="logo-admin">
+    <h1>Panel de administración</h1>
+    <a href="logout.php" class="btn-salir">Cerrar sesión</a>
+  </header>
+
+  <main class="panel">
+    <!-- FORMULARIO DE EDICIÓN -->
+    <form id="form-precios" class="formulario">
+      <div class="campo">
+        <label>Habitación 2 personas</label>
+        <input type="number" name="habitacion_2" required>
+      </div>
+      <div class="campo">
+        <label>Habitación 3 personas</label>
+        <input type="number" name="habitacion_3" required>
+      </div>
+      <div class="campo">
+        <label>Habitación 4 personas</label>
+        <input type="number" name="habitacion_4" required>
+      </div>
+      <div class="campo">
+        <label>Habitación 5 personas</label>
+        <input type="number" name="habitacion_5" required>
+      </div>
+      <div class="campo">
+        <label>Cochera</label>
+        <input type="number" name="cochera" required>
+      </div>
+      <div class="campo">
+        <label>Mascotas</label>
+        <input type="number" name="mascotas" required>
+      </div>
+
+      <button type="submit" class="btn-guardar">Guardar cambios</button>
+      <p id="mensaje"></p>
+    </form>
+
+    <!-- CUESTIONARIO FINAL -->
+    <section id="quiz" class="quiz-container">
+      <h2>🧠 Cuestionario de práctica</h2>
+      <div id="quiz-content"></div>
+    </section>
+  </main>
+</body>
+</html>

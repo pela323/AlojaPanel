@@ -1,0 +1,185 @@
+/* Fuentes */
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato-Light";
+  src: url("../fonts/Lato-Light.ttf");
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../fonts/Lato-Bold.ttf");
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background: #fff;
+  color: #4c4c4c;
+}
+
+/* Header */
+header {
+  background: #c48f33;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+h1, h2 {
+  font-family: "Lato-Bold";
+  margin: 0.5rem 0;
+}
+
+/* Página pública */
+.grid-precios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  color: #c48f33;
+}
+
+/* Panel admin */
+.admin .panel {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: #fff;
+}
+
+.formulario .campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.formulario label {
+  font-family: "Lato-Bold";
+  margin-bottom: 0.3rem;
+}
+
+.formulario input {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.btn-guardar {
+  background: #c48f33;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-guardar:hover {
+  background: #b27f2e;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .grid-precios {
+    grid-template-columns: 1fr;
+  }
+  .formulario input {
+    font-size: 0.95rem;
+  }
+}
+
+/* === LOGIN === */
+.login-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff 60%, #c48f33 60%);
+  font-family: "Lato", sans-serif;
+}
+
+.login-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.logo-login {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+
+.form-login input {
+  width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+/* === HEADER ADMIN === */
+.header-admin {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #c48f33;
+  color: white;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo-admin {
+  height: 50px;
+}
+
+.btn-salir {
+  background: white;
+  color: #c48f33;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-salir:hover {
+  background: #f7f7f7;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 600px) {
+  .header-admin {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+  .login-container {
+    padding: 1.5rem;
+  }
+}
