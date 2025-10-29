@@ -145,9 +145,9 @@ Se está desarrollando un **panel de administración con login**, donde el admin
 ---
 
 ## 💡 Autor
-Desarrollado por **JG**  
-Sitio: *(opcional)*  
-GitHub: *(tu enlace si querés)*
+Desarrollado por **Ezequiel Gatti**  
+Sitio: *https://gattidev.com*  
+GitHub: *https://github.com/gattidev*
 
 ---
 
